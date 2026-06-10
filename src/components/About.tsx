@@ -123,7 +123,7 @@ export default function About() {
             {
               label: "LOCATION",
               value: "Arlington, TX",
-              sub: "Open to Remote",
+              sub: "Open to Remote · Hybrid · On-site · Willing to Relocate",
             },
             {
               label: "GITHUB",

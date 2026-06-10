@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 
 const fadeUp: Variants = {
@@ -12,6 +13,7 @@ const fadeUp: Variants = {
 };
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
   return (
     <section
       id="contact"
@@ -74,11 +76,27 @@ export default function Contact() {
           />
 
           {/* Email */}
-          <p className="font-head text-[20px] font-bold text-text1 mb-2 relative">
+          {/* <p className="font-head text-[20px] font-bold text-text1 mb-2 relative">
             mdomer.9030@gmail.com
-          </p>
+          </p> */}
+          <div className="flex items-center justify-center gap-3 mb-2 relative">
+            <p className="font-head text-[20px] font-bold text-[#E6EDF3]">
+              mdomer.9030@gmail.com
+            </p>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText("mdomer.9030@gmail.com");
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="text-[12px] text-[#8B949E] border border-white/[0.07] px-3 py-1 rounded-md hover:text-[#E6EDF3] hover:border-white/[0.14] transition-all cursor-pointer bg-transparent"
+            >
+              {copied ? "✓ Copied" : "Copy"}
+            </button>
+          </div>
           <p className="text-text3 text-[14px] mb-8 relative">
-            Response within 24 hours · Open to US-based remote or on-site roles
+            Response within 24 hours · Open to Remote, Hybrid, or On-site roles
+            · Willing to Relocate
           </p>
 
           {/* Primary CTA */}
