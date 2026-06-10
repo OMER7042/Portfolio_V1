@@ -1,5 +1,7 @@
 # Mohammed Omer Ahmed — Portfolio
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://mohammedomerahmed.dev)
+
 Personal portfolio website built with Next.js, Tailwind CSS v4, and TypeScript.
 
 🌐 **Live:** [mohammedomerahmed.dev](https://mohammedomerahmed.dev)

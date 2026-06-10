@@ -3,11 +3,15 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CursorSpotlight from "@/components/CursorSpotlight";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Mohammed Omer Ahmed — Full-Stack Engineer",
   description:
     "Full-stack software engineer specializing in AI-powered, cloud-deployed applications. Built with React, Node.js, AWS, and Gemini 2.0.",
+  verification: {
+    google: "KqJsxaeVAjJgKOdSYxUUJBx0u7nH8KD4BI5Pk91-hsA",
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +34,7 @@ export default function RootLayout({
             Built with Next.js · Deployed on Vercel
           </span>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
